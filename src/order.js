@@ -6,8 +6,6 @@ module.exports = {
   // searchOrder
 }
 
-function takeOrder(order, deliveryOrders, takeoutOrders){
-  deliveryOrders.push(order);
-  takeoutOrders.push(order);
-  return deliveryOrders
+function takeOrder(order, array){
+  array.push(order);
 };
