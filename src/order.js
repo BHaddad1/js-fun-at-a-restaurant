@@ -2,7 +2,7 @@
 module.exports = {
    takeOrder,
    refundOrder,
-  // listItems,
+   listItems,
   // searchOrder
 }
 
@@ -20,4 +20,12 @@ function refundOrder(orderNum, array1) {
       array1.splice([i], 1);
     }
   }
+}
+
+function listItems(array2){
+  var items = []
+  for (var i = 0; i < array2.length; i++) {
+    items.push(array2[i].item);
+  }
+  return items.join(', ');
 }
