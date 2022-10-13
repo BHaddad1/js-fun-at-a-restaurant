@@ -20,8 +20,8 @@ function decreasePrice(priceToBeReduced){
   return priceToBeReduced - (priceToBeReduced * .1)
 }
 
-function createRecipe(){
-
+function createRecipe(title, ingredients, type){
+  return recipe = {title, ingredients, type}
 }
 
 
@@ -31,5 +31,5 @@ module.exports = {
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
