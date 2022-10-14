@@ -3,7 +3,7 @@ module.exports = {
    takeOrder,
    refundOrder,
    listItems,
-  // searchOrder
+   searchOrder
 }
 
 function takeOrder(order, array){
@@ -28,4 +28,14 @@ function listItems(array2){
     items.push(array2[i].item);
   }
   return items.join(', ');
+}
+
+function searchOrder(array3, orderItem){
+  var result = false
+  for (var i = 0; i < array3.length; i++) {
+    if (array3[i].item.includes(orderItem)) {
+      var result = true
+    }
+  }
+return result
 }
