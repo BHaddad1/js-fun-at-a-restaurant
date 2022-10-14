@@ -22,13 +22,13 @@ function addMenuItem(restaurantType, foodObject) {
   if (foodObject.type === "lunch"){
     if (!restaurantType.menus.lunch.includes(foodObject)){
       return restaurantType.menus.lunch.push(foodObject)}
-  return restaurantType.menus.lunch.push(foodObject)
  } else if (foodObject.type === "breakfast"){
     if (!restaurantType.menus.breakfast.includes(foodObject)){
         return restaurantType.menus.breakfast.push(foodObject);
       }
-  } else {
-    return restaurantType.menus.dinner.push(foodObject)
+  }
+   else {
+     restaurantType.menus.dinner.push(foodObject)
   }
   }
 
