@@ -10,11 +10,14 @@ class Chef {
     return `Hello, ${customerName}!`
   }
   checkForFood(food){
-    console.log("LOOK AT ME", Chef.restaurant)
-    if (food === Chef.restaurant){
+    for (var i = 0; i < this.restaurant.menus.breakfast.length; i++){
+    if (this.restaurant.menus.breakfast[i].name === food.name){
       return `Yes, we're serving ${food.name} today!`
+      }
     }
+    return `Sorry, we aren't serving ${food.name} today.`
   }
 }
+
 
 module.exports = Chef;
